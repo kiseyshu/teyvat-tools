@@ -108,7 +108,7 @@ window.GENSHIN_DATA = {
       id: 'pass-sacred-spirit', kind: 'pass',
       title: { ru: 'Боевой пропуск «Sacred Spirit Chronicle»', en: 'Battle Pass “Sacred Spirit Chronicle”' },
       sub: { ru: 'Пропуск патча 7.2.', en: 'Patch 7.2 battle pass.' },
-      start: '2026-11-04T06:00', end: '2026-12-15T14:59'
+      start: '2026-11-04T06:00', end: '2026-12-14T03:59'
     }
   ]
 };
