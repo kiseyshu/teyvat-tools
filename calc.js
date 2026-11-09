@@ -17,7 +17,7 @@
     if (isNaN(v)) { v = def; }
     return Math.max(min, Math.min(max, v));
   }
-  function fmtInt(n) { return String(n).replace(/\B(?=(\d{3})+(?!\d))/g, ' '); }
+  function fmtInt(n) { return String(n).replace(/\B(?=(\d{3})+(?!\d))/g, ' '); }
   function pct(p) {
     var ru = window.I18N.getLang() === 'ru';
     var d = ru ? ',' : '.', sp = ru ? ' ' : '';
