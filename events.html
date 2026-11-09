@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Teyvat Tools</title>
+<meta name="description" content="Текущие и будущие события Genshin Impact с обратным отсчётом. Live and upcoming Genshin Impact events with countdowns.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-page="events.html" data-title="title.events">
+<a class="skip" href="#main" data-i18n="skip">К содержимому</a>
+<header class="site" id="site-header"></header>
+
+<main id="main" class="container">
+  <section class="hero">
+    <h1 data-i18n="ev.h1"></h1>
+    <p data-i18n="ev.lead"></p>
+  </section>
+
+  <div class="toolbar">
+    <div class="seg" id="status-seg" role="group" data-i18n-attr="aria-label:f.status">
+      <button type="button" data-v="current" aria-pressed="true" data-i18n="f.current"></button>
+      <button type="button" data-v="upcoming" aria-pressed="false" data-i18n="f.upcoming"></button>
+      <button type="button" data-v="ended" aria-pressed="false" data-i18n="f.ended"></button>
+      <button type="button" data-v="all" aria-pressed="false" data-i18n="f.all"></button>
+    </div>
+    <label class="server"><span data-i18n="f.type"></span>
+      <select id="kind-select">
+        <option value="all" data-i18n="f.any"></option>
+        <option value="banner" data-i18n="f.banner"></option>
+        <option value="endgame" data-i18n="f.endgame"></option>
+        <option value="event" data-i18n="f.event"></option>
+        <option value="pass" data-i18n="f.pass"></option>
+      </select>
+    </label>
+  </div>
+
+  <div class="cards" id="events-list"></div>
+  <p class="note" id="data-note"></p>
+</main>
+
+<footer class="site-footer container" data-i18n="footer"></footer>
+
+<script src="schedule.js"></script>
+<script src="i18n.js"></script>
+<script src="events-data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
