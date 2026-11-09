@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://kiseyshu.github.io/teyvat-tools/sitemap.xml
