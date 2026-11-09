@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Teyvat Tools</title>
+<meta name="description" content="Genshin Impact: таймеры Бездны, Театра и Натиска, баннеры, калькулятор круток и промокоды. Timers, banners, wish calculator and codes.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-page="index.html" data-title="title.home">
+<a class="skip" href="#main" data-i18n="skip">К содержимому</a>
+<header class="site" id="site-header"></header>
+
+<main id="main" class="container">
+  <section class="hero art">
+    <div class="hero-text">
+      <h1 data-i18n="home.h1"></h1>
+      <p data-i18n="home.lead"></p>
+    </div>
+  </section>
+
+  <section aria-labelledby="timers-h">
+    <h2 id="timers-h" data-i18n="home.timers"></h2>
+    <div class="tiles" id="tiles"></div>
+  </section>
+
+  <section aria-labelledby="now-h">
+    <h2 id="now-h" data-i18n="home.now"></h2>
+    <div class="cards" id="now"></div>
+  </section>
+
+  <section aria-labelledby="soon-h">
+    <h2 id="soon-h" data-i18n="home.soon"></h2>
+    <div class="cards" id="soon"></div>
+  </section>
+
+  <section class="cta-row">
+    <a class="cta" href="calculator.html"><b data-i18n="cta.calc.t"></b><span data-i18n="cta.calc.d"></span></a>
+    <a class="cta" href="events.html"><b data-i18n="cta.events.t"></b><span data-i18n="cta.events.d"></span></a>
+    <a class="cta" href="codes.html"><b data-i18n="cta.codes.t"></b><span data-i18n="cta.codes.d"></span></a>
+  </section>
+
+  <p class="note" id="data-note"></p>
+</main>
+
+<footer class="site-footer container" data-i18n="footer"></footer>
+
+<script src="schedule.js"></script>
+<script src="i18n.js"></script>
+<script src="events-data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
