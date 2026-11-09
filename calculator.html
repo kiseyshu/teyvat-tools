@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Teyvat Tools</title>
+<meta name="description" content="Калькулятор круток Genshin Impact: шанс получить персонажа или оружие. Genshin Impact wish calculator.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-page="calculator.html" data-title="title.calc">
+<a class="skip" href="#main" data-i18n="skip">К содержимому</a>
+<header class="site" id="site-header"></header>
+
+<main id="main" class="container">
+  <section class="hero">
+    <h1 data-i18n="calc.h1"></h1>
+    <p data-i18n="calc.lead"></p>
+  </section>
+
+  <div class="layout">
+    <form class="panel steps-form" id="form" onsubmit="return false" autocomplete="off">
+      <div class="step">
+        <h3><span class="n">1</span><span data-i18n="calc.step1"></span></h3>
+        <div class="seg big" id="type-seg" role="group">
+          <button type="button" data-v="character" aria-pressed="true" data-i18n="calc.char"></button>
+          <button type="button" data-v="weapon" aria-pressed="false" data-i18n="calc.weapon"></button>
+        </div>
+      </div>
+
+      <div class="step">
+        <h3><span class="n">2</span><span data-i18n="calc.step2"></span></h3>
+        <div class="two">
+          <div class="field"><label for="fates" data-i18n="calc.fates"></label>
+            <input type="number" id="fates" min="0" value="0" inputmode="numeric"></div>
+          <div class="field"><label for="primos" data-i18n="calc.primos"></label>
+            <input type="number" id="primos" min="0" value="0" inputmode="numeric"></div>
+        </div>
+        <p class="muted hint" data-i18n="calc.have.hint"></p>
+      </div>
+
+      <div class="step">
+        <h3><span class="n">3</span><span data-i18n="calc.step3"></span></h3>
+        <div class="field"><label for="pity" data-i18n="calc.pity"></label>
+          <input type="number" id="pity" min="0" max="89" value="0" inputmode="numeric"></div>
+        <p class="muted hint" id="pity-hint"></p>
+        <div class="check"><input type="checkbox" id="guar"><label for="guar" id="guar-label"></label></div>
+      </div>
+
+      <details class="adv">
+        <summary data-i18n="calc.adv"></summary>
+        <div class="two">
+          <div class="field"><label for="copies" id="copies-label"></label>
+            <input type="number" id="copies" min="1" max="7" value="1" inputmode="numeric"></div>
+          <div class="field" id="win-row"><label for="win" data-i18n="calc.win"></label>
+            <select id="win">
+              <option value="55" selected data-i18n="calc.win55"></option>
+              <option value="50" data-i18n="calc.win50"></option>
+            </select></div>
+        </div>
+        <p class="muted hint" id="copies-hint"></p>
+        <h4 data-i18n="calc.save.h"></h4>
+        <div class="field"><label for="banner" data-i18n="calc.banner"></label><select id="banner"></select></div>
+        <div class="two">
+          <div class="field"><label for="days" data-i18n="calc.days"></label>
+            <input type="number" id="days" min="0" value="0" inputmode="numeric"></div>
+          <div class="field"><label for="income" data-i18n="calc.income"></label>
+            <input type="number" id="income" min="0" value="60" inputmode="numeric"></div>
+        </div>
+        <div class="check"><input type="checkbox" id="welkin"><label for="welkin" data-i18n="calc.welkin"></label></div>
+        <div class="field"><label for="oneoff" data-i18n="calc.oneoff"></label>
+          <input type="number" id="oneoff" min="0" value="0" inputmode="numeric"></div>
+        <p class="muted hint" data-i18n="calc.income.hint"></p>
+      </details>
+    </form>
+
+    <div class="result-col">
+      <section class="panel result-panel" aria-live="polite"><div id="result"></div></section>
+      <details class="panel more">
+        <summary data-i18n="res.more"></summary>
+        <div id="more-table"></div>
+        <h3 style="margin-top:16px" data-i18n="res.chart.h"></h3>
+        <canvas id="chart" role="img" data-i18n-attr="aria-label:res.chart.alt"></canvas>
+        <p class="muted hint" data-i18n="res.chart.hint"></p>
+      </details>
+      <details class="method">
+        <summary data-i18n="m.title"></summary>
+        <ul>
+          <li data-i18n="m.1"></li><li data-i18n="m.2"></li><li data-i18n="m.3"></li>
+          <li data-i18n="m.4"></li><li data-i18n="m.5"></li><li data-i18n="m.6"></li>
+        </ul>
+      </details>
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer container" data-i18n="footer"></footer>
+
+<script src="schedule.js"></script>
+<script src="i18n.js"></script>
+<script src="events-data.js"></script>
+<script src="gacha-core.js"></script>
+<script src="app.js"></script>
+<script src="calc.js"></script>
+</body>
+</html>
